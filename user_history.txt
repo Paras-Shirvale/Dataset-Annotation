@@ -1,0 +1,128 @@
+1	history
+2	sudo apt list | grep -i python3.10
+3	clear
+4	lynx https://ww.python.org/downloads/source
+5	lynx https://www.python.org/downloads/source/
+6	clear
+7	gzip -d Python-3.10.15.tgz
+8	tar -xf Python-3.10.15.tar
+9	ls -lah
+10	clear
+11	wget openssl.org/source/openssl-1.1.1t-tar.gz
+12	gzip -d openssl-1.1.1t-tar.gz
+13	ls
+14	tar -xf openssl-1.1.1t-tar
+15	ls
+16	clear
+17	cd openssl-1.1.1t/
+18	ls
+19	./Config --prefix=$HOME/openssl --openssl-dir=$HOME/openssl shared zlib
+20	ls
+21	./Configure --prefix=$HOME/openssl --openssl-dir=$HOME/openssl shared zlib
+22	./Configure --prefix=$HOME/openssl --openssl-dir=$HOME/openssl shared zlib gcc
+23	vim Makefile
+24	make -j4
+25	./configure --prefix=$HOME/openssl --openssldir=$HOME/openssl shared zlib gcc
+26	vim Makefile
+27	make -j5
+28	make install -j10
+29	vim /.bashrc
+30	source/.bashrc
+31	echo "$LD_LIBRARY_PATH"
+32	echo "$PATH"
+33	export CFLAGS="-I$HOME/openssl/include"
+34	echo "$CFLAGS"
+35	export LDFLAGS="-I$HOME/openssl/lib"
+36	echo "$LDFLAHS"
+37	echo "$LDFLAGS"
+38	cd ../Python-3.10.15/
+39	clear
+40	./configure --prefix=$HOME/python3.10 --with-openssl=$HOME/openssl
+41	vim Makefile
+42	make -j5
+43 	clear
+44 	vim /.bashrc
+45 	python3.10 -m ensurepip
+46	sudo apt-get install libffi-dev
+47	./configure --prefix=$HOME/python3.10 --with-openssl=$HOME/openssl
+48	vim Makefile
+49	make -j10
+50 	make install -j10
+51 	python3.10 -m ensure pip
+52 	python3.10 -m ensurepip
+53 	python3.10 -m pip install label-studio
+54 	python3.10 -m ensurepip
+55 	./configure --prefix=$HOME/python3.10 --with-openssl=$HOME/openssl --with-openssl-rpath=$HOME/openssl
+56	make -j10
+57 	make install -20
+58	make install -j20
+59 	python3.10 -m ensurepip
+60 	python3.10 -m pip install label-studio
+61	./configure --prefix=$HOME/python3.10 --with-openssl=$HOME/openssl --with-openssl-rpath=$HOME/openssl 
+62	vim Makefile
+63 	make clean install -j10
+64 	make clean
+65 	make -j20
+66 	make install -j100 -110
+67 	python3.10 -m ensurepip
+68	export PYTHONHOME=$HOME/python3.10
+69 	python3.10 -m ensurepip
+70 	python3.10 -m pip install label-studio
+71 	cd ..
+72	ls openssl/bin/openssl
+73	cd Python-3.10.15
+74	echo "$PATH"
+75	source /.bashrc
+76	echo "$PATH"
+77	./configure --prefix=$HOME/python3.10 --with-openssl=$HOME/openssl --with-openssl-rpath=$HOME/openssl
+78	vim Makefile
+79 	make install
+80 	make -j10
+81 	make install
+82 	make install -j100 -1100
+83 	python3.10 -m ensurepip
+84 	python3.10 -m pip install label-studio
+85 	python3.10 -m ssl
+86 	sudo apt-get install libssl-dev.
+87 	make -j10
+88 	./configure --prefix=$HOME/python3.10 --with-openssl=$HOME/openssl --with-openssl-rpath=$HOME/openssl
+89	make -j10
+90 	./configure --prefix=$HOME/python3.10
+91 	make -j10
+92 	cd ../openssl
+93 	Is
+94 	cd ../openssl-1.1.1t/
+95 	Is
+96 	make clean
+97 	make install -j10
+98 	cd ../Python-3.10.15/
+99 	./configure --prefix=$HOME/python3.10
+100	make clean
+101 	make install -j10 -110
+102 	make -110 -j10
+103 	make install -j100
+104 	python3.10 -m ensurepip
+105 	python3.10 -m pip install label-studio
+106	echo "$CFLAGS"
+107 	vim "/openssl/include/
+108 	vim "/openssl/include/openssl/
+109	vim /openssl/bin/
+110 	vim /openssl/lib/
+111	cd ../openssl-1.1.1t/
+112	./Configure gcc
+113	./confif --prefix=$HOME/openssl --openssldir=$HOME/openssl shared zlib
+114	./config --prefix=$HOME/openssl --openssldir=$HOME/openssl shared zlib
+115	vim Makefile
+116	make -j10
+117 	make clean
+118 	make -j10
+119	make install -j10
+120	cd ../Python-3.10.15/
+121	./configure --prefix=$HOME/python3.10 --with-openssl=$HOME/openssl --with-openssl-rpath=$HOME/openssl
+122	vim Makefile
+123	make -j10
+124	make install -j100
+125	python3.10 -m ensurepip
+126	python3.10 -m pip install label-studio
+127	history
+128	history> user_history.txt
